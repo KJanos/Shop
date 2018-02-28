@@ -23,5 +23,13 @@ namespace Shop
         {
             size = _size;
         }
+
+        public GoodsModel(string _name, string _size, int _quantity, int _price)
+        {
+            name = _name;
+            size = _size;
+            quantity = _quantity;
+            price = _price;
+        }
     }
 }

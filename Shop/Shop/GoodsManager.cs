@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Shop
 {
@@ -10,15 +11,17 @@ namespace Shop
     {
         private static List<GoodsModel> _items;
         private static List<GoodsModel> _size;
+        private static List<GoodsModel> _cart = new List<GoodsModel>();
+
 
         public GoodsManager()
         {
             _items = new List<GoodsModel>
             {
-                new GoodsModel ("Jeans", 850),
-                new GoodsModel ("Sweet", 900),
-                new GoodsModel ("Top", 400),
-                new GoodsModel ("Shirts", 270),
+                new GoodsModel("Jeans", 850),
+                new GoodsModel("Sweet", 900),
+                new GoodsModel("Top", 400),
+                new GoodsModel("Shirts", 270),
             };
 
             _size = new List<GoodsModel>
@@ -40,5 +43,29 @@ namespace Shop
         {
             return _size;
         }
+
+
+        public void AddtoCart(GoodsModel item)
+        {
+            _cart.Add(item);
+        }
+
+        public List<GoodsModel> Get()
+        {
+            return _cart;
+        }
+
+    /*public List<GoodsModel> AddtoCart(string nm, string sz, int quan, int pri)
+    {
+        _cart = new List<GoodsModel>
+        {
+            new GoodsModel(nm, sz, quan, pri)
+            
+        };
+        
+        
+        return _cart;
+
+    }*/
     }
 }
