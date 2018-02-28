@@ -55,6 +55,11 @@ namespace Shop
             return _cart;
         }
 
+        public void FillCart()
+        {
+
+        }
+
     /*public List<GoodsModel> AddtoCart(string nm, string sz, int quan, int pri)
     {
         _cart = new List<GoodsModel>

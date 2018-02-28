@@ -23,10 +23,10 @@ namespace Shop
             dataGridView1.Columns[4].Name = "Price";
             Form1 ff = new Form1();
 
-           /* for (int i = 0; i <= ff.rownumbers; i++)
+            for (int i = 0; i < ff.cart.Count; i++)
             {
                 dataGridView1.Rows.Add(i + 1, ff.cart[i].name, ff.cart[i].size, ff.cart[i].quantity, ff.cart[i].price);
-            }*/
+            }
         }
         
     }

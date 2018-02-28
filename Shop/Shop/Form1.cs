@@ -59,9 +59,7 @@ namespace Shop
             GoodsModel item = new GoodsModel(name, size, quantity, price);
             manager.AddtoCart(item);
             MessageBox.Show("Added to Cart");
-            Form2 FormCart = new Form2();
-            FormCart.dataGridView1.Rows.Add(name, size, quantity, price);
-
+            rownumbers += 1;
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
