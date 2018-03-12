@@ -12,9 +12,11 @@ namespace Shop
 {
     public partial class Form2 : Form
     {
+        private GoodsManager manager;
         public Form2()
         {
             InitializeComponent();
+            manager = new GoodsManager();
             dataGridView1.ColumnCount = 5;
             dataGridView1.Columns[0].Name = "#";
             dataGridView1.Columns[1].Name = "Name";
@@ -28,6 +30,14 @@ namespace Shop
                 dataGridView1.Rows.Add(i + 1, ff.cart[i].name, ff.cart[i].size, ff.cart[i].quantity, ff.cart[i].price);
             }
         }
-        
+
+        private void button_Remove_Click(object sender, EventArgs e)
+        {
+
+            int index = dataGridView1.SelectedCells[0].RowIndex;
+            dataGridView1.Rows.RemoveAt(index);
+            
+
+        }
     }
 }

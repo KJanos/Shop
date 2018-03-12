@@ -48,6 +48,7 @@ namespace Shop
         public void AddtoCart(GoodsModel item)
         {
             _cart.Add(item);
+            
         }
 
         public List<GoodsModel> Get()
@@ -55,22 +56,9 @@ namespace Shop
             return _cart;
         }
 
-        public void FillCart()
+        public void RemoveItem(GoodsModel item)
         {
-
+            _cart.Remove(item);
         }
-
-    /*public List<GoodsModel> AddtoCart(string nm, string sz, int quan, int pri)
-    {
-        _cart = new List<GoodsModel>
-        {
-            new GoodsModel(nm, sz, quan, pri)
-            
-        };
-        
-        
-        return _cart;
-
-    }*/
     }
 }
